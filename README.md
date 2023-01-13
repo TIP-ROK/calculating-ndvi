@@ -11,10 +11,10 @@ https://apps.sentinel-hub.com/eo-browser/
 
 Для презентации я скачал участок в Исык-кульской области из первого сайта:
 
-![image.png](readme_images/1)
+![image.png](readme_images/1.png)
 Первый сайт выдаёт нам tiff файлы в формате jp2, а второй в формате tiff. 
 
-![image (2).png](readme_images/2)
+![image (2).png](readme_images/2.png)
 
 ## Требования
 - Для обработки использовался язык Python 3.10.6
@@ -110,7 +110,7 @@ plt.show()
 
 Результат этого скрипта: высчитывает NDVI получает картинку в формате png сохраняет.
 
-![result.png](readme_images/3)
+![result.png](readme_images/3.png)
 
 ## Сохранение NDVI в tiff файл
 
@@ -155,9 +155,9 @@ with rasterio.open('./output/2ndvi.tiff', 'w', **kwargs) as dst:
 
 результат выглядит:
 
-![Figure_1.png](readme_images/4)Следующий шаг это вырезаем конкретный участок. Для этого на сайте [geojson.io](http://geojson.io) выделил участок и сохранил в файле cords.geojson:
+![Figure_1.png](readme_images/4.png)Следующий шаг это вырезаем конкретный участок. Для этого на сайте [geojson.io](http://geojson.io) выделил участок и сохранил в файле cords.geojson:
 
-![image (3).png](readme_images/5)
+![image (3).png](readme_images/5.png)
 
 ```
 {
@@ -251,7 +251,7 @@ cutting_tiff(outputpath='./output/cuttedNDVI.tiff', inputpath='./output/2ndvi.ti
 
 результат этого скрипта обрезал из tiff файла 2ndvi.tiff заданный участок:
 
-![image (5).png](readme_images/6)
+![image (5).png](readme_images/6.png)
 
 ### Высчитывание среднего показателя NDVI по заданному участку
 
@@ -286,7 +286,7 @@ print(get_region_of_interest(ndvi=ndvi))
 
 Результат данного скрипта:
 
-![image (6).png](readme_images/7)
+![image (6).png](readme_images/7.png)
 
 ### Преобразование из tiff в geojson
 
@@ -361,7 +361,7 @@ print(time.time() - start)
 
 Результат:
 
-![image (7).png](readme_images/8)
+![image (7).png](readme_images/8.png)
 
 ### Посмотреть все слои tiff файла
 
@@ -387,4 +387,4 @@ plt.show()
 
 при запуске этого кода результат будет следующим:
 
-![image (8).png](readme_images/9)
+![image (8).png](readme_images/9.png)
