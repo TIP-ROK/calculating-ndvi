@@ -12,7 +12,7 @@ https://apps.sentinel-hub.com/eo-browser/
 Для презентации я скачал участок в Исык-кульской области из первого сайта:
 
 ![image.png](readme_images/1.png)
-Первый сайт выдаёт нам tiff файлы в формате jp2, а второй в формате tiff. 
+Первый сайт выдаёт нам файлы в формате jp2, а второй в формате tiff. 
 
 ![image (2).png](readme_images/2.png)
 
