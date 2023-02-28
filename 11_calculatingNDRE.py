@@ -3,12 +3,11 @@ import numpy
 import rasterio
 
 
-image_file = "./output/sentinel2.tif"
+with rasterio.open('./kaium/cutted/cutted_B07.tif') as f:
+    band_red = f.read(1)
 
-
-with rasterio.open(image_file) as src:
-    band_red = src.read(3)
-    band_nir = src.read(4)
+with rasterio.open('./kaium/cutted/cutted_B8A.tif') as file:
+    band_nir = file.read(1)
 
 
 numpy.seterr(divide='ignore', invalid='ignore')
@@ -27,7 +26,7 @@ fig = plt.figure(figsize=(20, 10))
 ax = fig.add_subplot(111)
 
 
-cmap = plt.cm.YlGn
+cmap = 'BrBG'
 cax = ax.imshow(ndvi, cmap=cmap, clim=(min, max), vmin=min, vmax=max)
 
 
@@ -40,6 +39,6 @@ cbar = fig.colorbar(cax, orientation='horizontal', shrink=0.65)
 
 ax.plot(20, 10)
 
-plt.savefig('./output/result.png', bbox_inches='tight', transparent=True)
+plt.savefig('./kaium/result.png', bbox_inches='tight', transparent=True)
 plt.show()
 plt.close()
